@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import * as PropTypes from "prop-types";
 import './Counter.css'
 
@@ -13,13 +13,13 @@ class Counter extends Component {
         return <div className="Counter">
             {name}: {value}
 
-            <button className={'increment'} onClick={()=>{
+            <button className={'increment'} onClick={() => {
                 this.setState({value: value + 1})
             }}>
                 +
             </button>
 
-            <button className={'decrement'} onClick={()=>{
+            <button className={'decrement'} onClick={() => {
                 this.setState({value: value - 1})
             }}>
                 -

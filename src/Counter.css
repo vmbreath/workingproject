@@ -1,8 +1,9 @@
-.Counter{
-    //background-color: greenyellow;
+.Counter {
+/ / background-color: greenyellow;
     line-height: 20px;
 }
-.Counter .decrement{
+
+.Counter .decrement {
     background: red;
     font-size: 30px;
     width: 35px;
@@ -11,9 +12,9 @@
     border-width: 2px;
 
 
-    -webkit-box-shadow: 0px 0px 4px 4px rgba(15,15,8,0.89);
-    -moz-box-shadow: 0px 0px 4px 4px rgba(15,15,8,0.89);
-    box-shadow: 0px 0px 4px 4px rgba(15,15,8,0.89);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(15, 15, 8, 0.89);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(15, 15, 8, 0.89);
+    box-shadow: 0px 0px 4px 4px rgba(15, 15, 8, 0.89);
     margin: 10px;
     display: inline-flex;
     justify-content: center;
@@ -21,14 +22,16 @@
     line-height: 1px;
     transition: background-color 0.2s linear;
 }
-.Counter .decrement:hover{
+
+.Counter .decrement:hover {
     background: gray;
 }
-.Counter .decrement:active{
+
+.Counter .decrement:active {
     background: blue;
 }
 
-.Counter .increment{
+.Counter .increment {
     background: greenyellow;
     font-size: 30px;
     width: 35px;
@@ -37,9 +40,9 @@
     border-width: 2px;
 
 
-    -webkit-box-shadow: 0px 0px 4px 4px rgba(15,15,8,0.89);
-    -moz-box-shadow: 0px 0px 4px 4px rgba(15,15,8,0.89);
-    box-shadow: 0px 0px 4px 4px rgba(15,15,8,0.89);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(15, 15, 8, 0.89);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(15, 15, 8, 0.89);
+    box-shadow: 0px 0px 4px 4px rgba(15, 15, 8, 0.89);
     margin: 10px;
     display: inline-flex;
     justify-content: center;

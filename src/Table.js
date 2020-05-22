@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import './Table.css';
 import Data from './Data';
-import ReactTable from "react-table";
 import "react-table/react-table.css";
 
 
 let temp = '';
-let temppreviousrome='';
-let i=0;
+let temppreviousrome = '';
+let i = 0;
 const RomeNums = {
     'I': true,
     'II': true,
@@ -24,22 +23,19 @@ const RomeNums = {
 };
 
 
-
-
-
 function searchRome(string) {
 
     if (RomeNums[string]) {
         i++;
-        if (i>1){
-            return temppreviousrome+' '+string;
-        }else{
-            temppreviousrome=temp;
-            return temp+' '+string;
+        if (i > 1) {
+            return temppreviousrome + ' ' + string;
+        } else {
+            temppreviousrome = temp;
+            return temp + ' ' + string;
         }
 
     } else {
-        i=0;
+        i = 0;
         return string
     }
 }
@@ -55,7 +51,7 @@ const data = Data.map(function (elem) {
     return arr
 });
 
-window.data=data
+window.data = data
 console.log(data)
 
 class Table extends Component {
@@ -63,7 +59,7 @@ class Table extends Component {
     state = {};
 
     render() {
-        const PopularSalmonel = ['Nitra','Hessarek'];
+        const PopularSalmonel = ['Nitra', 'Hessarek'];
 
 
         const {filter1, filter2, filter3, filter4, filter5, filter6} = this.state;
@@ -123,115 +119,115 @@ class Table extends Component {
         );
 
         const filteredData = data.filter(it => filterBy1(it) && filterBy2(it) && filterBy3(it) && filterBy4(it) && filterBy5(it) && filterBy6(it));
-/*
-        if(true){
-            return <ReactTable
-                data={filteredData}
-                columns={[
-                    {
-                        Header: "Name",
-                        columns: [
+        /*
+                if(true){
+                    return <ReactTable
+                        data={filteredData}
+                        columns={[
                             {
                                 Header: "Name",
-                                id: "name",
-                                accessor: (d=>d[0])
-                            },
-                            {
-                                Header: "Last Name",
-                                id: "2",
-                                accessor: (it => it[1].join(', '))
-                            },
-                            {
-                                Header: "Last Name",
-                                id: "3",
-                                accessor: (it => it[2].join(', '))
-                            },
-                            {
-                                Header: "Last Name",
-                                id: "4",
-                                accessor: (it => it[3].join(', '))
+                                columns: [
+                                    {
+                                        Header: "Name",
+                                        id: "name",
+                                        accessor: (d=>d[0])
+                                    },
+                                    {
+                                        Header: "Last Name",
+                                        id: "2",
+                                        accessor: (it => it[1].join(', '))
+                                    },
+                                    {
+                                        Header: "Last Name",
+                                        id: "3",
+                                        accessor: (it => it[2].join(', '))
+                                    },
+                                    {
+                                        Header: "Last Name",
+                                        id: "4",
+                                        accessor: (it => it[3].join(', '))
+                                    }
+                                ]
                             }
-                        ]
-                    }
-                ]}
-                 defaultPageSize={filteredData.length}
-                style={{
-                    height: "400px" // This will force the table body to overflow and scroll, since there is not enough room
-                }}
-                className="-striped -highlight"
-            />
-        }
-*/
-        return (
-        <table className="table">
-            <thead className={'thead'}>
-            <tr className={'HeaderFixed'}>
-                <th className={'header'}>
-                    Серовар
-                </th>
-                <th className={'header'}>Соматические
-                    O антигены
-                </th>
-                <th className={'header'}>Жгутиковые H антигены (Фаза 1)
-                </th>
-                <th className={'header'}>Жгутиковые H антигены (Фаза 2)
-                </th>
-            </tr>
-            <tr className={'tr'}>
-                <th className={'th'}>
-                    Что нужно оставить
-                </th>
-                <th className={'th'}>
-                    <input className={'text1'} type="text" onChange={e => {
-                        this.setState({filter1: e.target.value.trim()})
-                    }}/>
-                </th>
-                <th className={'th'}>
-                    <input className={'text1'} type="text" onChange={e => {
-                        this.setState({filter2: e.target.value.trim()})
-                    }}/>
-                </th>
-                <th className={'th'}>
-                    <input className={'text1'} type="text" onChange={e => {
-                        this.setState({filter3: e.target.value.trim()})
-                    }}/>
-                </th>
-            </tr>
-            <tr className={'tr'}>
-                <th className={'th'}>
-                    Что нужно удалить
-                </th>
-                <th className={'th'}>
-                    <input className={'text2'} type="text" onChange={e => {
-                        this.setState({filter4: e.target.value.trim()})
-                    }}/>
-                </th>
-                <th className={'th'}>
-                    <input className={'text2'} type="text" onChange={e => {
-                        this.setState({filter5: e.target.value.trim()})
-                    }}/>
-                </th>
-                <th className={'th'}>
-                    <input className={'text2'} type="text" onChange={e => {
-                        this.setState({filter6: e.target.value.trim()})
-                    }}/>
-                </th>
-            </tr>
-            </thead>
-            <tbody className={'tbody'}>
-            {filteredData.map(it => <tr>
-                {(PopularSalmonel.indexOf(it[0])===-1)?
-                    <td className={'td'}>{it[0]}</td>:
-                    <td className={'highlight'} >{it[0]}</td>
+                        ]}
+                         defaultPageSize={filteredData.length}
+                        style={{
+                            height: "400px" // This will force the table body to overflow and scroll, since there is not enough room
+                        }}
+                        className="-striped -highlight"
+                    />
                 }
+        */
+        return (
+            <table className="table">
+                <thead className={'thead'}>
+                <tr className={'HeaderFixed'}>
+                    <th className={'header'}>
+                        Серовар
+                    </th>
+                    <th className={'header'}>Соматические
+                        O антигены
+                    </th>
+                    <th className={'header'}>Жгутиковые H антигены (Фаза 1)
+                    </th>
+                    <th className={'header'}>Жгутиковые H антигены (Фаза 2)
+                    </th>
+                </tr>
+                <tr className={'tr'}>
+                    <th className={'th'}>
+                        Что нужно оставить
+                    </th>
+                    <th className={'th'}>
+                        <input className={'text1'} type="text" onChange={e => {
+                            this.setState({filter1: e.target.value.trim()})
+                        }}/>
+                    </th>
+                    <th className={'th'}>
+                        <input className={'text1'} type="text" onChange={e => {
+                            this.setState({filter2: e.target.value.trim()})
+                        }}/>
+                    </th>
+                    <th className={'th'}>
+                        <input className={'text1'} type="text" onChange={e => {
+                            this.setState({filter3: e.target.value.trim()})
+                        }}/>
+                    </th>
+                </tr>
+                <tr className={'tr'}>
+                    <th className={'th'}>
+                        Что нужно удалить
+                    </th>
+                    <th className={'th'}>
+                        <input className={'text2'} type="text" onChange={e => {
+                            this.setState({filter4: e.target.value.trim()})
+                        }}/>
+                    </th>
+                    <th className={'th'}>
+                        <input className={'text2'} type="text" onChange={e => {
+                            this.setState({filter5: e.target.value.trim()})
+                        }}/>
+                    </th>
+                    <th className={'th'}>
+                        <input className={'text2'} type="text" onChange={e => {
+                            this.setState({filter6: e.target.value.trim()})
+                        }}/>
+                    </th>
+                </tr>
+                </thead>
+                <tbody className={'tbody'}>
+                {filteredData.map(it => <tr>
+                    {(PopularSalmonel.indexOf(it[0]) === -1) ?
+                        <td className={'td'}>{it[0]}</td> :
+                        <td className={'highlight'}>{it[0]}</td>
+                    }
 
 
-                <td >{it[1].join(', ')}</td>
-                <td >{it[2].join(', ')}</td>
-                <td >{it[3].join(', ')}</td>
-            </tr>)}
-            </tbody>
-        </table>
+                    <td>{it[1].join(', ')}</td>
+                    <td>{it[2].join(', ')}</td>
+                    <td>{it[3].join(', ')}</td>
+                </tr>)}
+                </tbody>
+            </table>
         )
     }
 }

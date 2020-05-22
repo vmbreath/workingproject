@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Counter from "./Counter";
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import Data from './Data';
 import Table from "./Table.js"
 import Legend from "./Legend.js"
 import TableFixedHeader from "./TableFixedHeader";
@@ -14,8 +10,8 @@ class App extends Component {
         isLegendShowed: false
     };
 
-    onHandleClick=()=>{
-        this.setState(prevState=>({
+    onHandleClick = () => {
+        this.setState(prevState => ({
             isLegendShowed: !prevState.isLegendShowed
         }));
     }
@@ -26,26 +22,25 @@ class App extends Component {
 
 
             <div className="App">
-                {this.state.isLegendShowed?
+                {this.state.isLegendShowed ?
                     (<div className={'LegendRight'}>
                         <Legend/>
-                    </div>):
+                    </div>) :
                     null
                 }
                 <div className={'Button'}>
-                    <button  onClick={this.onHandleClick}>
-                        {this.state.isLegendShowed?
-                            'Закрыть легенду':'Открыть легенду'
+                    <button onClick={this.onHandleClick}>
+                        {this.state.isLegendShowed ?
+                            'Закрыть легенду' : 'Открыть легенду'
                         }
 
-                </button>
+                    </button>
                 </div>
-
 
 
                 <div className={'TableLeft'}>
                     <TableFixedHeader/>
-                <Table asd={'123'}/>
+                    <Table asd={'123'}/>
                 </div>
             </div>
         );

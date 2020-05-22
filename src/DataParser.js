@@ -15,10 +15,10 @@ async function processLineByLine() {
 
 
     let fileData;
-    fileData = "export default "+JSON.stringify(data)+";";
-    fs.writeFile('Data.js', fileData, 'utf-8', ()=>{
+    fileData = "export default " + JSON.stringify(data) + ";";
+    fs.writeFile('Data.js', fileData, 'utf-8', () => {
 
-    } )
+    })
 }
 
 processLineByLine();

@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './TableFixedHeader.css';
 
-class TableFixedHeader extends React.Component{
+class TableFixedHeader extends React.Component {
     render() {
-        return(
+        return (
             <table className="TableHeader">
-                <thead >
-                <tr >
+                <thead>
+                <tr>
                     <th className={'header1'}>
                         Серовар
                     </th>

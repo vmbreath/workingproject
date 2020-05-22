@@ -1,10 +1,10 @@
-.App .table span{
+.App .table span {
     margin: 10px;
 }
 
-.App .table{
+.App .table {
     background: lightblue;
-    //width:400px;
+/ / width: 400 px;
     margin-left: auto;
     margin-right: auto;
     border-collapse: separate;
@@ -14,26 +14,27 @@
 }
 
 
-.App .table .tr{
+.App .table .tr {
     background: lightgrey;
     vertical-align: middle;
 }
 
 
-
-.App .table .td{
+.App .table .td {
     background: lightgreen;
     border: 2px solid black;
 
 }
-.table .th{
-   vertical-align: middle;
+
+.table .th {
+    vertical-align: middle;
     padding: 1px;
     margin: 1px;
     border: 1px solid black;
 
 }
-.table .header{
+
+.table .header {
 
     padding: 1px;
     text-align: center;
@@ -43,29 +44,31 @@
 }
 
 
-
-.App .table .text1{
-    //background: lightgreen;
+.App .table .text1 {
+/ / background: lightgreen;
     margin: 1px;
     padding: 1px;
     vertical-align: text-top;
 }
-.App .table .highlight{
+
+.App .table .highlight {
     background: lightsalmon;
     border: 2px solid black;
 
 }
 
-.table .text1:hover{
+.table .text1:hover {
     background: lightgreen;
 }
-.table .text1:active{
+
+.table .text1:active {
     background: blue;
 }
 
-.table .text2:hover{
+.table .text2:hover {
     background: lightcoral;
 }
-.table .text2:active{
+
+.table .text2:active {
     background: blue;
 }
