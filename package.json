@@ -1,5 +1,5 @@
 {
-  "homepage": "http://vmbreath.github.io/my-app",
+  "homepage": "/workingproject",
   "name": "test-react",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && rm -rf docs && cp -R build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
