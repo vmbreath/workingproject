@@ -1,0 +1,32 @@
+.App {
+  position:relative;
+
+}
+
+.Button{
+  position: fixed;
+  left: 920px;
+}
+.LegendRight{
+  text-align: center;
+  position: fixed;
+  left: 920px;
+  top: 30px;
+}
+.TableLeft{
+  text-align: center;
+  position: absolute;
+  left: 0px;
+}
+.App .label{
+  color: gray;
+}
+.App .value{
+  color: green;
+}
+.App .value:hover{
+  color: red;
+}
+
+
+

@@ -1,0 +1,71 @@
+.App .table span{
+    margin: 10px;
+}
+
+.App .table{
+    background: lightblue;
+    //width:400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border: 4px double black;
+    text-align: center;
+    width: border-box;
+}
+
+
+.App .table .tr{
+    background: lightgrey;
+    vertical-align: middle;
+}
+
+
+
+.App .table .td{
+    background: lightgreen;
+    border: 2px solid black;
+
+}
+.table .th{
+   vertical-align: middle;
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid black;
+
+}
+.table .header{
+
+    padding: 1px;
+    text-align: center;
+    border: 1px solid black;
+    background: burlywood;
+    vertical-align: middle;
+}
+
+
+
+.App .table .text1{
+    //background: lightgreen;
+    margin: 1px;
+    padding: 1px;
+    vertical-align: text-top;
+}
+.App .table .highlight{
+    background: lightsalmon;
+    border: 2px solid black;
+
+}
+
+.table .text1:hover{
+    background: lightgreen;
+}
+.table .text1:active{
+    background: blue;
+}
+
+.table .text2:hover{
+    background: lightcoral;
+}
+.table .text2:active{
+    background: blue;
+}

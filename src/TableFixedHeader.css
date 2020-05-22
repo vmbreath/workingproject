@@ -1,0 +1,50 @@
+.header1{
+    width: 162px;
+    height: 28.600px;
+    //left: 1px;
+    text-align: center;
+    margin: 5px;
+    background: burlywood;
+    border: 1px solid black;
+    //vertical-align: middle;
+    position: fixed;
+}
+.header2{
+//width: 148px;
+//height: 71px;
+    left: 164.400px;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid black;
+    background: burlywood;
+    vertical-align: middle;
+    position: fixed;
+    margin: 5px;
+}
+.header3{
+//width: 148px;
+//height: 71px;
+    left: 376.5px;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid black;
+    background: burlywood;
+    vertical-align: middle;
+    position: fixed;
+    margin: 5px;
+}
+.header4{
+//width: 148px;
+//height: 71px;
+    left: 643px;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid black;
+    background: burlywood;
+    vertical-align: middle;
+    position: fixed;
+    margin: 5px;
+}
+.TableHeader{
+    //position: fixed;
+}
