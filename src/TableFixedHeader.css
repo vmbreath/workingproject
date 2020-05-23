@@ -1,18 +1,14 @@
 .header1 {
     width: 162px;
     height: 28.600px;
-/ / left: 1 px;
     text-align: center;
     margin: 5px;
     background: burlywood;
     border: 1px solid black;
-/ / vertical-align: middle;
     position: fixed;
 }
 
 .header2 {
-/ / width: 148 px;
-/ / height: 71 px;
     left: 164.400px;
     padding: 1px;
     text-align: center;
@@ -24,8 +20,6 @@
 }
 
 .header3 {
-/ / width: 148 px;
-/ / height: 71 px;
     left: 376.5px;
     padding: 1px;
     text-align: center;
@@ -37,8 +31,6 @@
 }
 
 .header4 {
-/ / width: 148 px;
-/ / height: 71 px;
     left: 643px;
     padding: 1px;
     text-align: center;
@@ -50,5 +42,4 @@
 }
 
 .TableHeader {
-/ / position: fixed;
 }

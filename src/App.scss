@@ -1,0 +1,111 @@
+.App {
+ position: center;
+
+
+  .label {
+    color: gray;
+  }
+
+  .value {
+    color: green;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.Button {
+  position: absolute;
+  left: 0px;
+}
+
+.LegendRight {
+  display: block;
+  text-align: center;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+
+  top: 200px;
+}
+
+.TableLeft {
+
+  position: center;
+
+
+  top:200px;
+}
+
+.IntroBox{
+  display: block;
+  background-color: #1b1e21;
+  background-size: 100px;
+  height: 200px;
+
+}
+.Intro{
+
+
+
+  HTML, BODY {
+    height: 100%;
+    width: 100%;
+
+  }
+
+  $colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
+
+  BODY {
+    background: hsl(200,100,11);
+    background-size: .12em 100%;
+    font: 16em/1 Arial;
+
+  }
+
+  .text--line {
+    font-size: 3.7em;
+  }
+
+  svg {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+
+  }
+
+  $max: 5;
+  $stroke-step: 1%;
+  .text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
+    stroke-width: 0.5px;
+
+    animation: stroke-offset 5s infinite linear;
+
+    @for $item from 1 through $max {
+      $stroke-color: nth($colors, $item);
+
+      &:nth-child(#{$item}) {
+        stroke: $stroke-color;
+        stroke-dashoffset: $stroke-step * $item;
+      }
+    }
+  }
+
+  @keyframes stroke-offset {
+    50% {
+      stroke-dashoffset: $stroke-step * $max;
+      stroke-dasharray: 0 $stroke-step * $max*2.5;
+    }
+  }
+
+
+}
+
+
+
+
+

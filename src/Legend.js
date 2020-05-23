@@ -1,14 +1,15 @@
 import React from 'react';
-import './Legend.css';
+import './Legend.scss';
 
 class Legend extends React.Component {
 
     render() {
         return (
-            <div className={'legend'}>
+            <div className={'Legend'}>
                 <h1>
                     Легенда
                 </h1>
+
 
                 <p>Сальмонеллы вида S.enterica делятся на несколько подвидов и обозначаются следующими символами:<br/>
 

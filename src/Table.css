@@ -4,13 +4,13 @@
 
 .App .table {
     background: lightblue;
-/ / width: 400 px;
     margin-left: auto;
     margin-right: auto;
     border-collapse: separate;
     border: 4px double black;
     text-align: center;
     width: border-box;
+
 }
 
 
@@ -45,7 +45,6 @@
 
 
 .App .table .text1 {
-/ / background: lightgreen;
     margin: 1px;
     padding: 1px;
     vertical-align: text-top;
