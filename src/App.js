@@ -28,7 +28,7 @@ class App extends Component {
     onHandleScroll=(e)=>{
         let element = e.target;
         console.log('Y offset= '+window.scrollY);
-        if (window.scrollY>300){
+        if (window.scrollY>299){
             this.setState({isHeaderShowed: true});
         }else {
             this.setState({isHeaderShowed: false});
@@ -51,16 +51,17 @@ class App extends Component {
 
 
                 <div className={'Button'}>
-                    <button onClick={this.onHandleClick}>
-                        {this.state.isLegendShowed ?
-                            'Закрыть легенду' : 'Открыть легенду'
-                        }
+                <button onClick={this.onHandleClick}>
+                    {this.state.isLegendShowed ?
+                        'Закрыть легенду' : 'Открыть легенду'
+                    }
 
-                    </button>
-                </div>
+                </button>
+            </div>
 
 
                 <div className='IntroBox'>
+
                     <svg className="Intro" viewBox="0 0 800 600">
                         <symbol id="s-text">
                             <text textAnchor="middle"

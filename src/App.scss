@@ -19,12 +19,15 @@
 
     }
   }
+  .Button {
+    position: absolute;
+    left: 0px;
+    background-color: #1b1e21;
+    padding: 5px;
+  }
 }
 
-.Button {
-  position: absolute;
-  left: 0px;
-}
+
 
 .LegendRight {
   display: block;
