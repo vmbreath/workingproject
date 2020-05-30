@@ -22,20 +22,28 @@
   }
 
   .IntroBox{
-    display: block;
+
+    width: 100em;
     background-color: #1b1e21;
     background-size: 100px;
-    height: 18vh;
+    height: 28vh;
 
-    .TableLeft {
-      position: center;
-
-    }
   }
-  .Intro{
 
+
+  .TableLeft {
+    position: center;
+
+  }
+
+  .Intro{
+    position: absolute;
+    height: 150vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     HTML, BODY {
-      height: 100%;
+      height: 20%;
       width: 100%;
 
     }
@@ -44,16 +52,16 @@
 
     BODY {
       background: hsl(200,100,11);
-      background-size: .12em 100%;
+      background-size: .12em 20%;
       font: 16em/1 Arial;
 
     }
 
     .text--line {
-      font-size: 5em;
+      font-size: 5rem;
     }
     .text--line2 {
-      font-size: 2em;
+      font-size: 2rem;
     }
 
     svg {
