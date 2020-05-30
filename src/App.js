@@ -41,6 +41,10 @@ class App extends Component {
 
             <div className="App" onScroll={this.onHandleScroll}>
 
+                <head>
+                    <title/>
+                    <meta name="viewport" content="width=device-width"/>
+                </head>
                 {this.state.isHeaderShowed ?
                     (<div className={'FixedHeader'} >
                         <TableFixedHeader/>
@@ -64,16 +68,16 @@ class App extends Component {
 
                     <svg className="Intro" viewBox="0 0 800 600">
                         <symbol id="s-text">
-                            <text textAnchor="middle"
+                            <text textAnchor={'middle'}
                                   x="50%"
                                   y="10%"
                                   className="text--line"
                             >
                                 Схема
                             </text>
-                            <text textAnchor="middle"
+                            <text textAnchor={'middle'}
                                   x="50%"
-                                  y="15%"
+                                  y="18%"
                                   className="text--line2"
                             >
                                 Кауфмана-Уайта
