@@ -45,13 +45,14 @@ class App extends Component {
                     <title/>
                     <meta name="viewport" content="width=device-width"/>
                 </head>
-                {this.state.isHeaderShowed ?
-                    (<div className={'FixedHeader'} >
-                        <TableFixedHeader/>
 
-                    </div>) :
-                    null
-                }
+                {this.state.isHeaderShowed ?
+                (<div className={'FixedHeader'} >
+                    <TableFixedHeader/>
+
+                </div>) :
+                null
+            }
 
 
                 <div className={'Button'}>
