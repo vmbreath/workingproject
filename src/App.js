@@ -5,23 +5,50 @@ import Table from "./Table.js"
 import Legend from "./Legend.js"
 import TableFixedHeader from "./TableFixedHeader";
 
+
 class App extends Component {
     state = {
-        isLegendShowed: false
+        isLegendShowed: false,
+        isHeaderShowed:false
     };
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.onHandleScroll, true);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.onHandleScroll);
+    }
 
     onHandleClick = () => {
         this.setState(prevState => ({
             isLegendShowed: !prevState.isLegendShowed
         }));
-    }
+    };
+    onHandleScroll=(e)=>{
+        let element = e.target;
+        console.log('Y offset= '+window.scrollY);
+        if (window.scrollY>300){
+            this.setState({isHeaderShowed: true});
+        }else {
+            this.setState({isHeaderShowed: false});
+        }
+    };
 
     render() {
 
         return (
 
+            <div className="App" onScroll={this.onHandleScroll}>
 
-            <div className="App">
+                {this.state.isHeaderShowed ?
+                    (<div className={'FixedHeader'} >
+                        <TableFixedHeader/>
+
+                    </div>) :
+                    null
+                }
+
 
                 <div className={'Button'}>
                     <button onClick={this.onHandleClick}>
@@ -33,7 +60,7 @@ class App extends Component {
                 </div>
 
 
-                    <div className='IntroBox'>
+                <div className='IntroBox'>
                     <svg className="Intro" viewBox="0 0 800 600">
                         <symbol id="s-text">
                             <text textAnchor="middle"
@@ -55,24 +82,24 @@ class App extends Component {
 
                         <g className="g-ants">
                             <use xlinkHref="#s-text"
-    className="text-copy"/>
+                                 className="text-copy"/>
                             <use xlinkHref="#s-text"
-    className="text-copy"/>
+                                 className="text-copy"/>
                             <use xlinkHref="#s-text"
-    className="text-copy"/>
+                                 className="text-copy"/>
                             <use xlinkHref="#s-text"
-    className="text-copy"/>
+                                 className="text-copy"/>
                             <use xlinkHref="#s-text"
-    className="text-copy"/>
+                                 className="text-copy"/>
                         </g>
 
 
                     </svg>
-                    </div>
+                </div>
 
                 <div className={'TableLeft'}>
-                    <TableFixedHeader/>
-                    <Table asd={'123'}/>
+
+                    <Table onScroll={this.onHandleScroll}/>
                 </div>
 
                 {this.state.isLegendShowed ?

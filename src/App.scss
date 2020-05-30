@@ -13,6 +13,12 @@
       color: red;
     }
   }
+  .TableLeft{
+    .FixedHeader{
+      position: sticky;
+
+    }
+  }
 }
 
 .Button {
@@ -26,7 +32,6 @@
   position: absolute;
   margin-right: auto;
   margin-left: auto;
-
   top: 200px;
 }
 
@@ -42,12 +47,10 @@
   display: block;
   background-color: #1b1e21;
   background-size: 100px;
-  height: 200px;
+  height: 125px;
 
 }
 .Intro{
-
-
 
   HTML, BODY {
     height: 100%;
@@ -65,7 +68,10 @@
   }
 
   .text--line {
-    font-size: 3.7em;
+    font-size: 5em;
+  }
+  .text--line2 {
+    font-size: 2em;
   }
 
   svg {
@@ -81,7 +87,7 @@
     fill: none;
     stroke: white;
     stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
-    stroke-width: 0.5px;
+    stroke-width: 0.9px;
 
     animation: stroke-offset 5s infinite linear;
 

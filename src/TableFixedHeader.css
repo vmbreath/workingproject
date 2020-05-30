@@ -1,8 +1,13 @@
+.TableHeader{
+
+
+}
+
 .header1 {
     width: 17.8%;
     height: 29px;
     text-align: center;
-    margin: 5px;
+    margin: 0 5px;
     background: burlywood;
     border: 1px solid black;
     position: fixed;
@@ -17,7 +22,7 @@
     background: burlywood;
     vertical-align: middle;
     position: fixed;
-    margin: 5px;
+    margin: 0 5px;
 }
 
 .header3 {
@@ -29,7 +34,7 @@
     background: burlywood;
     vertical-align: middle;
     position: fixed;
-    margin: 5px;
+    margin: 0 5px;
 }
 
 .header4 {
@@ -41,7 +46,7 @@
     background: burlywood;
     vertical-align: middle;
     position: fixed;
-    margin: 5px;
+    margin: 0 5px;
 }
 
 .TableHeader {

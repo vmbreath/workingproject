@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import './Table.css';
 import Data from './Data';
 import "react-table/react-table.css";
+import ScrollableTable from "react-ui-basics/ScrollableTable";
+import 'react-ui-basics/bundle.css';
+import 'react-ui-basics/ScrollableTable.css';
 
 
 let temp = '';
@@ -75,8 +78,6 @@ class Table extends Component {
 
         const filters1 = filter1Parts && filter1Parts.map(it => new RegExp(`^((${it})|(\\[${it}\\])|(${it}\\])|(\\[${it}))$`));
 
-        //filters1 && filters1.forEach(it=>console.log(it))
-        //filter1Parts && filter1Parts.forEach(it=>console.log(it))
         let filterBy1 = it => !filter1 || filters1.every(pattern => it[1].some(item => pattern.test(item)))
         /*
          let filterBy1 = it => !filter1 || filter1Parts.every(filterPart =>
@@ -119,6 +120,35 @@ class Table extends Component {
         );
 
         const filteredData = data.filter(it => filterBy1(it) && filterBy2(it) && filterBy3(it) && filterBy4(it) && filterBy5(it) && filterBy6(it));
+        if (false) {
+            return <div className={'table1'}>
+                <ScrollableTable
+                    data={filteredData.map(i => ({
+                        column1: `${i[0]}`,
+                        column2: `${i[1]}`,
+                        column3: `${i[2]}`,
+                        column4: `${i[3]}`
+                    }))}
+                    columns={[
+                        {
+                            header: 'Column 1', field: 'column1', classname: 'header11',
+                        },
+                        {
+                            header: 'Column 2 (not sortable)', sortable: false, field: 'column2',
+                        },
+                        {
+                            header: 'Column 3 with formatter', field: 'column3', formatter: ((value) => value.toUpperCase())
+                        },
+                        {
+                            header: 'Column 4 with formatter', field: 'column4', formatter: ((value) => value.toUpperCase())
+                        }
+                    ]}
+                />
+                </div>
+
+
+        }
+
         /*
                 if(true){
                     return <ReactTable

@@ -12,8 +12,21 @@
     width: border-box;
 
 }
+.App .table1 {
+    background: lightblue;
+    border-collapse: separate;
+    border: 4px double black;
+    position: absolute;
+    height: 100vh;
+    width:100%;
+}
+.App .header11 {
+    background: lightblue;
+    border-collapse: separate;
+    border: 4px double black;
+    width: inherit;
 
-
+}
 .App .table .tr {
     background: lightgrey;
     vertical-align: middle;
