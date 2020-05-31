@@ -25,8 +25,8 @@ class App extends Component {
             isLegendShowed: !prevState.isLegendShowed
         }));
     };
-    onHandleScroll=(e)=>{
-        let element = e.target;
+
+    onHandleScroll=()=>{
         console.log('Y offset= '+window.scrollY);
         if (window.scrollY>299){
             this.setState({isHeaderShowed: true});
@@ -41,11 +41,6 @@ class App extends Component {
 
             <div className="App" onScroll={this.onHandleScroll}>
 
-                <head>
-                    <title/>
-                    <meta name="viewport" content="width=device-width"/>
-                </head>
-
                 {this.state.isHeaderShowed ?
                 (<div className={'FixedHeader'} >
                     <TableFixedHeader/>
@@ -53,7 +48,6 @@ class App extends Component {
                 </div>) :
                 null
             }
-
 
                 <div className={'Button'}>
                 <button onClick={this.onHandleClick}>
@@ -105,7 +99,7 @@ class App extends Component {
 
                 <div className={'TableLeft'}>
 
-                    <Table onScroll={this.onHandleScroll}/>
+                    <Table/>
                 </div>
 
                 {this.state.isLegendShowed ?
